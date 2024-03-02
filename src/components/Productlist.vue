@@ -29,7 +29,8 @@
             showItem: function(){
                 let max = this.maximum;
                 return this.products.filter(function(item){
-                    return item.price <= max;
+                    // digunakan untuk mengambil bagian bilangan bulat dari suatu angka dengan menghilangkan bagian desimalnya
+                    return Math.trunc(item.price) <= max;
                 })
             }
         },
